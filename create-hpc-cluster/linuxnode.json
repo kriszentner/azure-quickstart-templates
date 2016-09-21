@@ -198,8 +198,8 @@
               "typeHandlerVersion": "1.2",
               "autoUpgradeMinorVersion": true,
               "settings": {
-              "fileUris": "[parameters('scriptBaseUri')]",
-              "commandToExecute": "[parameters('computeNodePostConfigScript')]"
+              "fileUris": "[parameters('scriptFileUri')]",
+              "commandToExecute": "[parameters('scriptCommandToExecute')]"
               },
               "protectedSettings": {}
           }
