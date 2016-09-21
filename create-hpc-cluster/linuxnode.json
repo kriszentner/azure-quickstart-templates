@@ -110,7 +110,19 @@
       "metadata": {
         "description": "Not used currently."
       }    
-    }
+    },
+    "scriptFileUri": {
+        "type": "String",
+        "metadata": {
+            "description": "The URL to execute the Linux script"
+        }
+    },
+    "scriptCommandToExecute": {
+        "type": "String",
+        "metadata": {
+            "description": "The command line to execute"
+        }
+    }    
   },
   "variables":{
     "osDiskUri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/vhds/', toLower(parameters('vmName')), '-os', uniqueString(parameters('subnetId')), '.vhd')]"
