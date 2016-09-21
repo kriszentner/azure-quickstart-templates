@@ -202,7 +202,6 @@
               "commandToExecute": "[parameters('computeNodePostConfigScript')]"
               },
               "protectedSettings": {}
-              }
           }
         }
       ]
