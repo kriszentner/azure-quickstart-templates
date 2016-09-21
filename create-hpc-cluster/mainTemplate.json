@@ -172,6 +172,18 @@
         "description": "Base URL for Marketplace",
         "artifactsBaseUrl": ""
       }
+    },
+    "scriptFileUri": {
+        "type": "String",
+        "metadata": {
+            "description": "The URL to execute the Linux script"
+        }
+    },
+    "scriptCommandToExecute": {
+        "type": "String",
+        "metadata": {
+            "description": "The command line to execute"
+        }
     }
   },
   "variables": {
