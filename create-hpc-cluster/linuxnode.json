@@ -186,20 +186,23 @@
       "resources": [
         {
           "type": "Microsoft.Compute/virtualMachines/extensions",
-          "name": "[concat(parameters('vmName'), '/installHPCNodeAgent')]",
+          "name": "[concat(parameters('vmName'), '/customscript')]",
           "apiVersion": "[parameters('apiVersion')]",
           "location": "[resourceGroup().location]",
           "dependsOn": [
             "[concat('Microsoft.Compute/virtualMachines/', parameters('vmName'))]"
           ],
           "properties": {
-            "publisher": "Microsoft.HpcPack",
-            "type": "LinuxNodeAgent",
-            "typeHandlerVersion": "1.6",
-            "autoUpgradeMinorVersion": true,
-            "protectedSettings": {
-              "ClusterName": "[concat(parameters('clusterName'), '.', parameters('privateDomainName'))]"
-            }
+              "publisher": "Microsoft.OSTCExtensions",
+              "type": "CustomScriptForLinux",
+              "typeHandlerVersion": "1.2",
+              "autoUpgradeMinorVersion": true,
+              "settings": {
+              "fileUris": "[parameters('scriptBaseUri')]",
+              "commandToExecute": "[parameters('computeNodePostConfigScript')]"
+              },
+              "protectedSettings": {}
+              }
           }
         }
       ]
