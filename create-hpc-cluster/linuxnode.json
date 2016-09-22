@@ -211,7 +211,8 @@
               "autoUpgradeMinorVersion": true,
               "settings": {
               "fileUris": "[parameters('scriptFileUri')]",
-              "commandToExecute": "[parameters('scriptCommandToExecute')]"
+              "commandToExecute": "[parameters('scriptCommandToExecute')]",
+              "enableInternalDNSCheck": false
               },
               "protectedSettings": {}
           }
