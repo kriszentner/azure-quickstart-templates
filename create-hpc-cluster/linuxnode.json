@@ -207,9 +207,8 @@
           "properties": {
               "publisher": "Microsoft.OSTCExtensions",
               "type": "CustomScriptForLinux",
-              "typeHandlerVersion": "1.4",
+              "typeHandlerVersion": "2.0",
               "autoUpgradeMinorVersion": true,
-              "version": "2.*",
               "settings": {
               "fileUris": "[parameters('scriptFileUri')]",
               "commandToExecute": "[parameters('scriptCommandToExecute')]"
