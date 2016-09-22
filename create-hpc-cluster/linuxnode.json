@@ -205,9 +205,9 @@
             "[concat('Microsoft.Compute/virtualMachines/', parameters('vmName'))]"
           ],
           "properties": {
-              "publisher": "Microsoft.OSTCExtensions",
-              "type": "CustomScriptForLinux",
-              "typeHandlerVersion": "2.0",
+              "publisher": "Microsoft.Azure.Extensions",
+              "type": "CustomScript",
+              "typeHandlerVersion": "1.5",
               "autoUpgradeMinorVersion": true,
               "settings": {
               "fileUris": "[parameters('scriptFileUri')]",
