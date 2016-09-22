@@ -209,6 +209,7 @@
               "type": "CustomScriptForLinux",
               "typeHandlerVersion": "1.4",
               "autoUpgradeMinorVersion": true,
+              "version": "2.*",
               "settings": {
               "fileUris": "[parameters('scriptFileUri')]",
               "commandToExecute": "[parameters('scriptCommandToExecute')]"
