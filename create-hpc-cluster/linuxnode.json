@@ -206,8 +206,8 @@
           ],
           "properties": {
               "publisher": "Microsoft.Azure.Extensions",
-              "type": "CustomScriptForLinux",
-              "typeHandlerVersion": "1.5",
+              "type": "CustomScript",
+              "typeHandlerVersion": "2.0",
               "autoUpgradeMinorVersion": true,
               "settings": {
               "fileUris": "[parameters('scriptFileUri')]",
