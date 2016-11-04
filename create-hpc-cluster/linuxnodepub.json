@@ -111,9 +111,6 @@
             "description": "The command line to execute"
         }
     },
-    "resourceGroupName": {
-        "type": "String"
-    },
     "diagnosticsStorageAccountName": {
         "type": "String"
     }
@@ -139,13 +136,13 @@
                 "id": "[parameters('subnetId')]"
               },
               "publicIpAddress": {
-                "id": "[resourceId(parameters('resourceGroupName'),'Microsoft.Network/publicIpAddresses', variables('publicIpAddressName'))]"
+                "id": "[resourceId(resourceGroup().Name,'Microsoft.Network/publicIpAddresses', variables('publicIpAddressName'))]"
               }
             }
           }
         ],
         "networkSecurityGroup": {
-            "id": "[resourceId(parameters('resourceGroupName'), 'Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
+            "id": "[resourceId(resourceGroup().Name, 'Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
         }
       },
       "dependsOn": [
@@ -157,7 +154,7 @@
         "type": "Microsoft.Network/publicIpAddresses",
         "name": "[variables('publicIpAddressName')]",
         "apiVersion": "2016-09-01",
-        "location": "[parameters('location')]",
+        "location": "[resourceGroup().location]",
         "properties": {
             "publicIpAllocationMethod": "Dynamic"
         }
@@ -166,7 +163,7 @@
         "type": "Microsoft.Network/networkSecurityGroups",
         "name": "[variables('networkSecurityGroupName')]",
         "apiVersion": "2016-09-01",
-        "location": "[parameters('location')]",
+        "location": "[resourceGroup().location]",
         "properties": {
             "securityRules": [
                 {
