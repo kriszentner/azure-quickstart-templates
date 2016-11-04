@@ -86,12 +86,6 @@
         "description": "The base URI of the script"
       }
     },
-    "clusterName": {
-      "type": "string",
-      "metadata": {
-        "description": "The HPC cluster name"
-      }
-    },
     "privateDomainName": {
       "type": "string",
       "metadata": {
