@@ -114,9 +114,6 @@
     "resourceGroupName": {
         "type": "String"
     },
-    "networkSecurityGroupName": {
-        "type": "String"
-    },
     "diagnosticsStorageAccountName": {
         "type": "String"
     }
