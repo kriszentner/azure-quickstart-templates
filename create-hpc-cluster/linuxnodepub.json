@@ -120,7 +120,7 @@
   },
   "variables":{
     "osDiskUri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/vhds/', toLower(parameters('vmName')), '-os', uniqueString(parameters('subnetId')), '.vhd')]",
-    "publicIPAddressName": "[concat(parameters('vmName'),'IP')]",
+    "publicIpAddressName": "[concat(parameters('vmName'),'IP')]",
     "networkSecurityGroupName": "[concat(parameters('vmName'),'-nsg')]"
   },
   "resources": [
