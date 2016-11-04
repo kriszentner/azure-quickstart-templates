@@ -80,12 +80,6 @@
         "description": "The availability set name"
       }
     },
-    "customData": {
-      "type": "string",
-      "metadata": {
-        "description": "The custom data in base64 format"
-      }
-    },
     "scriptBaseUri": {
       "type": "string",
       "metadata": {
@@ -219,7 +213,6 @@
           "computerName": "[parameters('vmName')]",
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]",
-          "customData": "[parameters('customData')]",
           "linuxConfiguration": {
             "disablePasswordAuthentication": "false"
           }
