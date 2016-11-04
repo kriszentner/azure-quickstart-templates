@@ -254,7 +254,7 @@
                 "enabled": true,
                 "storageUri": "[reference(resourceId('securitydata', 'Microsoft.Storage/storageAccounts', parameters('diagnosticsStorageAccountName')), '2015-06-15').primaryEndpoints['blob']]"
             }
-        },        
+        }       
       },
       "resources": [
         {
