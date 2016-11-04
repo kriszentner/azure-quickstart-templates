@@ -139,23 +139,23 @@
                 "id": "[parameters('subnetId')]"
               },
               "publicIpAddress": {
-                "id": "[resourceId(parameters('resourceGroupName'),'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
+                "id": "[resourceId(parameters('resourceGroupName'),'Microsoft.Network/publicIpAddresses', variables('publicIpAddressName'))]"
               }
             }
           }
         ],
         "networkSecurityGroup": {
-            "id": "[resourceId(parameters('resourceGroupName'), 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+            "id": "[resourceId(parameters('resourceGroupName'), 'Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
         }
       },
       "dependsOn": [
-          "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]",
-          "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]"
+          "[concat('Microsoft.Network/publicIpAddresses/', variables('publicIpAddressName'))]",
+          "[concat('Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]"
       ]      
     },
     {
         "type": "Microsoft.Network/publicIpAddresses",
-        "name": "[parameters('publicIpAddressName')]",
+        "name": "[variables('publicIpAddressName')]",
         "apiVersion": "2016-09-01",
         "location": "[parameters('location')]",
         "properties": {
@@ -164,7 +164,7 @@
     },
     {
         "type": "Microsoft.Network/networkSecurityGroups",
-        "name": "[parameters('networkSecurityGroupName')]",
+        "name": "[variables('networkSecurityGroupName')]",
         "apiVersion": "2016-09-01",
         "location": "[parameters('location')]",
         "properties": {
